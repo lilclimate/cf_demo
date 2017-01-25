@@ -1,4 +1,4 @@
-<?php 
+<?php
 // 应用目录为当前目录
 define('APP_PATH', dirname(dirname(__FILE__)) . '/');
 define('LIB_PATH', APP_PATH . 'libraries/');

@@ -20,8 +20,8 @@ class Core
         $controllerName = 'Index';
         $action = 'index';
         $param = array();
-
-      $url = isset($_GET['url']) ? $_GET['url'] : false;
+        dd($_GET);
+        $url = isset($_GET['url']) ? $_GET['url'] : false;
         if ($url) {
             // 使用“/”分割字符串，并保存在数组中
             $urlArray = explode('/', $url);
@@ -103,8 +103,7 @@ class Core
     public static function loadClass($class)
     {
         $frameworks = FRAME_PATH . $class . '.class.php';
-        $controllers = APP_PATH . 'application/controllers/' . $class . '.class.php';
-        var_dump($controllers);exit;
+        $controllers = APP_PATH . 'application/controllers/' . $class . '.php';
         $models = APP_PATH . 'application/models/' . $class . '.class.php';
 
         if (file_exists($frameworks)) {
